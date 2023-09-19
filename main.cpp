@@ -144,13 +144,82 @@ public:
 	}
 
 	void drawInfo() {
-		for (int i = 0; i < 10; ++i) {
-            std::stringstream ssInfo;
-            ssInfo << "Id" << i + 1 << ": Peso->" << objects[i].weight << " ; R$->" << objects[i].value;
-            glColor3f(1.0, 1.0, 1.0);
-            gl_font(FL_HELVETICA, 12);
-            gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
-        }
+        for (int i = 0; i < 10; ++i) {
+	        switch(i) {
+				case 0:{
+					std::stringstream ssInfo;
+				    ssInfo << "Fruta" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				case 1:{
+					std::stringstream ssInfo;
+				    ssInfo << "Bola" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				case 2:{
+					std::stringstream ssInfo;
+				    ssInfo << "Planta" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				case 3:{
+					std::stringstream ssInfo;
+				    ssInfo << "Celular" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				case 4:{
+					std::stringstream ssInfo;
+				    ssInfo << "Notebook" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				case 5:{
+					std::stringstream ssInfo;
+				    ssInfo << "Gameboy" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				case 6:{
+					std::stringstream ssInfo;
+				    ssInfo << "Moto" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				case 7:{
+					std::stringstream ssInfo;
+				    ssInfo << "Hamburguer" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				case 8:{
+					std::stringstream ssInfo;
+				    ssInfo << "Pizza" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				case 9:{
+					std::stringstream ssInfo;
+				    ssInfo << "Batata" << "| Peso: " << objects[i].weight << " / R$: " << objects[i].value;
+				    glColor3f(1.0, 1.0, 1.0);
+				    gl_font(FL_HELVETICA, 12);
+				    gl_draw(ssInfo.str().c_str(), -1.45f, 1.4f - i * 0.1f);
+					break;}
+				default:
+					break;
+			}
+	    }
         
         // Escreve as informações da mochila
         std::stringstream ssBackpack;
